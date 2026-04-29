@@ -6,21 +6,21 @@
 
 set -e
 
-echo "🌐 ============================================"
+echo "============================================"
 echo "   Travaux Pratiques HTTP - Commandes cURL"
-echo "============================================ 🌐"
+echo "============================================"
 echo ""
 
 # ============================================================
 # TP 2 - Maîtrise de cURL
 # ============================================================
 
-echo "📌 TP 2 - MAÎTRISE DE cURL"
+echo "TP 2 - MAITRISE DE cURL"
 echo "========================================="
 echo ""
 
 # -------- 2.1 Requête GET simple --------
-echo "✅ 2.1 - Requête GET simple"
+echo "2.1 - Requête GET simple"
 echo ""
 
 echo "Requête basique:"
@@ -39,7 +39,7 @@ echo "..."
 echo ""
 
 # -------- 2.2 POST avec données --------
-echo "✅ 2.2 - Requête POST"
+echo "2.2 - Requête POST"
 echo ""
 
 echo "Form data:"
@@ -56,7 +56,7 @@ curl -X POST \
 echo ""
 
 # -------- 2.3 Headers personnalisés --------
-echo "✅ 2.3 - Headers personnalisés"
+echo "2.3 - Headers personnalisés"
 echo ""
 
 echo 'curl -H "Authorization: Bearer mon-token-secret" -H "Accept: application/json" https://httpbin.org/headers'
@@ -66,7 +66,7 @@ curl -H "Authorization: Bearer mon-token-secret" \
 echo ""
 
 # -------- 2.4 Redirections --------
-echo "✅ 2.4 - Redirections"
+echo "2.4 - Redirections"
 echo ""
 
 echo "Sans -L (s'arrête):"
@@ -80,7 +80,7 @@ curl -L https://httpbin.org/redirect/1 | head -10
 echo ""
 
 # -------- 2.5 Télécharger --------
-echo "✅ 2.5 - Télécharger un fichier"
+echo "2.5 - Télécharger un fichier"
 echo ""
 
 echo "Sauvegarder avec -o:"
@@ -90,7 +90,7 @@ echo "Fichier sauvegardé: /tmp/test-httpbin.txt"
 echo ""
 
 # -------- 2.6 Exercice avancé --------
-echo "✅ 2.6 - Exercice avancé (POST avec headers et affichage)"
+echo "2.6 - Exercice avancé (POST avec headers et affichage)"
 echo ""
 
 echo 'curl -X POST -H "Content-Type: application/json" -H "X-Custom-Header: MonHeader" -d "{\"action\":\"test\",\"value\":42}" -i https://httpbin.org/post'
@@ -106,11 +106,11 @@ echo ""
 # ============================================================
 
 echo ""
-echo "📌 TP 4 - ANALYSE DES HEADERS DE SÉCURITÉ"
+echo "TP 4 - ANALYSE DES HEADERS DE SECURITE"
 echo "========================================="
 echo ""
 
-echo "✅ Analyser google.com:"
+echo "Analyser google.com:"
 echo 'curl -I https://google.com'
 curl -I https://google.com 2>/dev/null | head -15
 echo ""
@@ -130,11 +130,11 @@ echo ""
 # ============================================================
 
 echo ""
-echo "📌 TP 5 - CACHE HTTP"
+echo "TP 5 - CACHE HTTP"
 echo "========================================="
 echo ""
 
-echo "✅ 5.1 - Observer le cache (60 secondes)"
+echo "5.1 - Observer le cache (60 secondes)"
 echo 'curl -i https://httpbin.org/cache/60'
 curl -i https://httpbin.org/cache/60 2>/dev/null | head -20
 echo ""
@@ -154,9 +154,9 @@ echo ""
 # ============================================================
 
 echo ""
-echo "✅ ============================================"
-echo "   Tous les tests de cURL sont terminés!"
-echo "============================================ ✅"
+echo "============================================"
+echo "   Tous les tests de cURL sont termines!"
+echo "============================================"
 echo ""
 echo "Fichiers créés:"
 echo "  • /tmp/test-httpbin.txt"

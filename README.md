@@ -1,12 +1,12 @@
-# 📚 Travaux Pratiques HTTP - DevTools & cURL
+# Travaux Pratiques HTTP - DevTools & cURL
 
 > **Cours complet**: Exploration HTTP, DevTools, cURL, Fetch API, Sécurité, Cache  
 > **Date**: 26 avril 2026  
-> **Statut**: ✅ Complet et fonctionnel
+> **Statut**: Complet et fonctionnel
 
 ---
 
-## 📖 Table des matières
+## Table des matières
 
 1. [Vue d'ensemble](#vue-densemble)
 2. [Fichiers du projet](#fichiers-du-projet)
@@ -17,29 +17,29 @@
 
 ---
 
-## 🎯 Vue d'ensemble
+## Vue d'ensemble
 
 Ce projet contient une série complète de travaux pratiques (TP) sur les protocoles HTTP, les outils de développement web et les APIs REST.
 
 **Sujets couverts:**
-- ✅ **TP 1**: Exploration avec les DevTools (Network, Headers, Codes statut)
-- ✅ **TP 2**: Maîtrise de cURL (GET, POST, Headers, Redirections)
-- ✅ **TP 3**: API REST avec JavaScript (Fetch, async/await, CRUD)
-- ✅ **TP 4**: Analyse des Headers de Sécurité (HSTS, CSP, CORS)
-- ✅ **TP 5**: Cache HTTP (Cache-Control, ETag, Conditionnelles)
+- **TP 1**: Exploration avec les DevTools (Network, Headers, Codes statut)
+- **TP 2**: Maîtrise de cURL (GET, POST, Headers, Redirections)
+- **TP 3**: API REST avec JavaScript (Fetch, async/await, CRUD)
+- **TP 4**: Analyse des Headers de Sécurité (HSTS, CSP, CORS)
+- **TP 5**: Cache HTTP (Cache-Control, ETag, Conditionnelles)
 
 ---
 
-## 📁 Fichiers du projet
+## Fichiers du projet
 
 ```
 http-tp-devtools-curl/
-├── README.md                          # 👈 Vous êtes ici
-├── TP_Resultats_Complets.md          # 📋 Tous les résultats et réponses
-├── client-http-minimaliste.html       # 🌐 Client HTTP interactif (TP 1 Ex)
-├── tp3-fetch-api.js                   # 📜 Scripts Fetch avancés (TP 3)
-├── run-curl-tests.sh                  # 🔨 Script pour exécuter les tests cURL
-└── .git/                              # 📦 Dépôt Git
+├── README.md                          # Vous êtes ici
+├── TP_Resultats_Complets.md          # Tous les résultats et réponses
+├── client-http-minimaliste.html       # Client HTTP interactif (TP 1 Ex)
+├── tp3-fetch-api.js                   # Scripts Fetch avancés (TP 3)
+├── run-curl-tests.sh                  # Script pour exécuter les tests cURL
+└── .git/                              # Dépôt Git
 ```
 
 ### Descriptions détaillées:
@@ -53,7 +53,7 @@ http-tp-devtools-curl/
 
 ---
 
-## 🚀 Installation & Utilisation
+## Installation & Utilisation
 
 ### Prérequis
 
@@ -62,14 +62,14 @@ http-tp-devtools-curl/
 - **Node.js** optionnel (pour certains scripts)
 - **Git** pour cloner le repo
 
-### 1️⃣ Cloner le dépôt
+### 1. Cloner le dépôt
 
 ```bash
 git clone https://github.com/lafkiar-rachid1/http-tp-devtools-curl.git
 cd http-tp-devtools-curl
 ```
 
-### 2️⃣ Ouvrir le fichier de résultats
+### 2. Ouvrir le fichier de résultats
 
 Consulter tous les résultats et réponses:
 ```bash
@@ -78,7 +78,7 @@ code TP_Resultats_Complets.md
 cat TP_Resultats_Complets.md
 ```
 
-### 3️⃣ Utiliser le client HTTP interactif
+### 3. Utiliser le client HTTP interactif
 
 Ouvrir dans un navigateur:
 ```bash
@@ -89,7 +89,7 @@ open client-http-minimaliste.html
 # Clic droit → Open with Live Server
 ```
 
-### 4️⃣ Exécuter les tests cURL
+### 4. Exécuter les tests cURL
 
 ```bash
 # Rendre exécutable
@@ -102,7 +102,7 @@ chmod +x run-curl-tests.sh
 bash run-curl-tests.sh
 ```
 
-### 5️⃣ Utiliser les scripts JavaScript
+### 5. Utiliser les scripts JavaScript
 
 Dans la **console du navigateur**:
 
@@ -122,7 +122,7 @@ postJSON('https://...', {...}); // Utilitaire POST
 
 ---
 
-## 📚 TP Détaillés
+## TP Détaillés
 
 ### TP 1: Exploration avec les DevTools
 
@@ -132,11 +132,11 @@ postJSON('https://...', {...}); // Utilitaire POST
 - Observer les codes de statut
 
 **Points clés couverts:**
-- ✅ Ouvrir DevTools (F12)
-- ✅ Onglet Network pour voir requêtes
-- ✅ Observer headers, body, statut
-- ✅ "Preserve log" pour garder historique
-- ✅ Tester avec fetch() dans Console
+- Ouvrir DevTools (F12)
+- Onglet Network pour voir requêtes
+- Observer headers, body, statut
+- "Preserve log" pour garder historique
+- Tester avec fetch() dans Console
 
 **Résultats:** Voir [TP_Resultats_Complets.md](TP_Resultats_Complets.md#tp-1--exploration-avec-les-devtools)
 
@@ -260,9 +260,9 @@ If-None-Match: "w/\"56d-..."           # Vérifier si modifié
 
 ---
 
-## 📊 Résultats
+## Résultats
 
-### Questions Théoriques Répondues ✅
+### Questions Théoriques Répondues
 
 1. **Différence entre -i et -v en cURL**
    - `-i`: Affiche les headers de réponse + body
@@ -284,25 +284,25 @@ If-None-Match: "w/\"56d-..."           # Vérifier si modifié
    - Protection contre XSS (JavaScript malveillant ne peut pas y accéder)
    - Aussi: `Secure` (HTTPS seulement) et `SameSite` (protection CSRF)
 
-### Tableaux Remplis ✅
+### Tableaux Remplis
 
-- ✅ Codes statut HTTP (200, 404, 500, redirections)
-- ✅ Requêtes HTTP (GET, POST, PUT, DELETE)
-- ✅ Headers importants (Authorization, Content-Type, Cache-Control)
-- ✅ Headers de sécurité (GitHub, Google, Mozilla)
-- ✅ Cache pour fichiers statiques vs dynamiques
+- Codes statut HTTP (200, 404, 500, redirections)
+- Requêtes HTTP (GET, POST, PUT, DELETE)
+- Headers importants (Authorization, Content-Type, Cache-Control)
+- Headers de sécurité (GitHub, Google, Mozilla)
+- Cache pour fichiers statiques vs dynamiques
 
-### Scripts Créés ✅
+### Scripts Créés
 
-- ✅ Client HTTP minimaliste (interface graphique)
-- ✅ fetchWithRetry() avec backoff exponentiel
-- ✅ Utilitaires getJSON() et postJSON()
-- ✅ Récupération parallèle avec fetchMultiple()
-- ✅ Script bash pour tous les tests cURL
+- Client HTTP minimaliste (interface graphique)
+- fetchWithRetry() avec backoff exponentiel
+- Utilitaires getJSON() et postJSON()
+- Récupération parallèle avec fetchMultiple()
+- Script bash pour tous les tests cURL
 
 ---
 
-## 🔗 Ressources
+## Ressources
 
 ### Documentations officielles
 
@@ -329,19 +329,19 @@ If-None-Match: "w/\"56d-..."           # Vérifier si modifié
 
 ---
 
-## 📝 Concepts Clés
+## Concepts Clés
 
 ### HTTP Verbes (Méthodes)
 
 | Verbe | Utilité | Idempotent |
 |-------|---------|-----------|
-| **GET** | Récupérer | ✅ Oui |
-| **POST** | Créer | ❌ Non |
-| **PUT** | Remplacer | ✅ Oui |
-| **PATCH** | Modifier partiellement | ❌ Non |
-| **DELETE** | Supprimer | ✅ Oui |
-| **HEAD** | Comme GET sans body | ✅ Oui |
-| **OPTIONS** | Dire ce qui est possible | ✅ Oui |
+| **GET** | Récupérer | Oui |
+| **POST** | Créer | Non |
+| **PUT** | Remplacer | Oui |
+| **PATCH** | Modifier partiellement | Non |
+| **DELETE** | Supprimer | Oui |
+| **HEAD** | Comme GET sans body | Oui |
+| **OPTIONS** | Dire ce qui est possible | Oui |
 
 ### Codes de Statut HTTP
 
@@ -363,7 +363,7 @@ If-None-Match: "w/\"56d-..."           # Vérifier si modifié
 
 ---
 
-## ✅ Checklist de Complétion
+## Checklist de Complétion
 
 - [x] TP 1 - DevTools explorés
 - [x] TP 2 - Commandees cURL testées
@@ -379,20 +379,20 @@ If-None-Match: "w/\"56d-..."           # Vérifier si modifié
 
 ---
 
-## 👨‍💻 Auteur
+## Auteur
 
 **Assistant GitHub Copilot**  
 Utilisant Claude Haiku 4.5
 
 ---
 
-## 📄 Licence
+## Licence
 
 Ce projet est à usage éducatif.
 
 ---
 
-## 🚀 Prochaines étapes
+## Prochaines étapes
 
 Pour aller plus loin:
 
@@ -406,4 +406,4 @@ Pour aller plus loin:
 ---
 
 **Dernière mise à jour:** 26 avril 2026  
-**Statut:** ✅ Complet et testé
+**Statut:** Complet et testé

@@ -1,4 +1,4 @@
-# 📚 Résultats Complets - Travaux Pratiques HTTP, DevTools & cURL
+# Résultats Complets - Travaux Pratiques HTTP, DevTools & cURL
 
 > Réalisé le 26 avril 2026
 
@@ -6,7 +6,7 @@
 
 ## TP 1 : Exploration avec les DevTools
 
-### 1.1 Ouvrir les DevTools ✅
+### 1.1 Ouvrir les DevTools
 
 **Étapes réalisées:**
 - Chrome/Firefox ouvert
@@ -483,7 +483,7 @@ fetchWithRetry('https://jsonplaceholder.typicode.com/posts/1')
 
 ### 4.1 Vérifier les headers d'un site
 
-#### Voir TOUS les headers:
+#### Voir tous les headers:
 ```bash
 curl -I https://google.com
 ```
@@ -530,9 +530,9 @@ content-security-policy: default-src 'none'; ...
 
 | Site | HSTS | X-Frame | CSP | Referrer | Note |
 |------|------|---------|-----|----------|------|
-| **github.com** | ✅ max-age=31536000 | ✅ DENY | ✅ Strict | ✅ strict-origin-when-cross-origin | Sécurisation excellente |
-| **google.com** | ✅ max-age=31536000 | ✅ SAMEORIGIN | ✅ Présent | ✅ Strict | Très bien sécurisé |
-| **mozilla.org** | ✅ max-age=63072000 | ✅ DENY | ✅ Très strict | ✅ strict-origin-when-cross-origin | Excellent |
+| **github.com** | max-age=31536000 | DENY | Strict | strict-origin-when-cross-origin | Sécurisation excellente |
+| **google.com** | max-age=31536000 | SAMEORIGIN | Présent | Strict | Très bien sécurisé |
+| **mozilla.org** | max-age=63072000 | DENY | Très strict | strict-origin-when-cross-origin | Excellent |
 
 ---
 
@@ -658,7 +658,7 @@ ETag: W/"version123"
 
 ---
 
-## Exercices Récapitulatifs
+## Exercices Recapitulatifs
 
 ### Exercice 1 : Client HTTP minimaliste
 
@@ -845,7 +845,7 @@ Set-Cookie: sessionId=abc123; HttpOnly; Secure; SameSite=Strict
 
 ---
 
-## 📊 Résumé des Apprentissages
+## Résumé des Apprentissages
 
 ### Concepts Clés Compris:
 
@@ -882,14 +882,14 @@ Set-Cookie: sessionId=abc123; HttpOnly; Secure; SameSite=Strict
 
 ---
 
-## 🎓 Fichiers Créés
+## Fichiers Créés
 
-1. ✅ **TP_Resultats_Complets.md** - Ce fichier avec tous les résultats
-2. ✅ **client-http-minimaliste.html** - Client HTTP interactif
-3. ✅ **scripts-test.js** - Scripts fetch avancés
+1. **TP_Resultats_Complets.md** - Ce fichier avec tous les résultats
+2. **client-http-minimaliste.html** - Client HTTP interactif
+3. **scripts-test.js** - Scripts fetch avancés
 
 ---
 
 **Auteur:** Assistant GitHub Copilot  
 **Date:** 26 avril 2026  
-**Statut:** ✅ Tous les TP réalisés et documentés
+**Statut:** Tous les TP réalisés et documentés
