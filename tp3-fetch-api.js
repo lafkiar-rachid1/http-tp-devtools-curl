@@ -154,7 +154,7 @@ const exercice34_DELETE = async (postId = 1) => {
  * @returns {Promise<Response>} La réponse HTTP
  */
 const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
-  console.log(`🔄 fetchWithRetry: ${url} (max ${maxRetries} tentatives)`);
+  console.log(`fetchWithRetry: ${url} (max ${maxRetries} tentatives)`);
   
   let lastError = null;
   let delayMs = 1000; // 1 seconde entre chaque tentative
@@ -170,7 +170,7 @@ const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
         lastError = new Error(`HTTP ${response.status}: Erreur serveur`);
         
         if (attempt < maxRetries) {
-          console.log(`   ❌ Erreur ${response.status}, attente ${delayMs}ms...`);
+          console.log(`   Erreur ${response.status}, attente ${delayMs}ms...`);
           await new Promise(resolve => setTimeout(resolve, delayMs));
           delayMs *= 1.5; // Backoff exponentiel
           continue;
@@ -178,7 +178,7 @@ const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
       }
 
       // Sinon, retourner la réponse (même si 4xx)
-      console.log(`   ✅ Réponse reçue: ${response.status}`);
+      console.log(`   Reponse reçue: ${response.status}`);
       return response;
 
     } catch (error) {
@@ -186,7 +186,7 @@ const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
       lastError = error;
 
       if (attempt < maxRetries) {
-        console.log(`   ❌ Erreur réseau, attente ${delayMs}ms...`);
+        console.log(`   Erreur réseau, attente ${delayMs}ms...`);
         await new Promise(resolve => setTimeout(resolve, delayMs));
         delayMs *= 1.5;
         continue;
@@ -195,7 +195,7 @@ const fetchWithRetry = async (url, options = {}, maxRetries = 3) => {
   }
 
   // Toutes les tentatives ont échoué
-  console.error('❌ Échec après ' + maxRetries + ' tentatives');
+  console.error('Echec après ' + maxRetries + ' tentatives');
   throw lastError || new Error('Impossible de contacter le serveur');
 };
 
@@ -211,9 +211,9 @@ const testFetchWithRetry = async () => {
     );
     
     const data = await response.json();
-    console.log('✅ Succès:', data);
+    console.log(' Succès:', data);
   } catch (error) {
-    console.error('❌ Erreur finale:', error.message);
+    console.error(' Erreur finale:', error.message);
   }
 };
 
@@ -225,7 +225,7 @@ const testFetchWithRetry = async () => {
  * Récupère plusieurs ressources en parallèle
  */
 const fetchMultiple = async (urls) => {
-  console.log(`📦 Récupération de ${urls.length} ressources...`);
+  console.log(`Récupération de ${urls.length} ressources...`);
   
   try {
     const promises = urls.map(url =>
@@ -233,10 +233,10 @@ const fetchMultiple = async (urls) => {
     );
     
     const results = await Promise.all(promises);
-    console.log('✅ Toutes les ressources chargées');
+    console.log('Toutes les ressources chargées');
     return results;
   } catch (error) {
-    console.error('❌ Erreur:', error);
+    console.error('Erreur:', error);
     throw error;
   }
 };
@@ -252,7 +252,7 @@ const fetchMultiple = async (urls) => {
  * Récupère des données avec timeout
  */
 const fetchWithTimeout = async (url, timeout = 5000) => {
-  console.log(`⏱️ Fetch avec timeout de ${timeout}ms: ${url}`);
+  console.log(`Fetch avec timeout de ${timeout}ms: ${url}`);
   
   try {
     const response = await Promise.race([
@@ -264,7 +264,7 @@ const fetchWithTimeout = async (url, timeout = 5000) => {
     
     return response;
   } catch (error) {
-    console.error('❌ Erreur:', error.message);
+    console.error('Erreur:', error.message);
     throw error;
   }
 };
@@ -296,7 +296,7 @@ const getJSON = async (url, options = {}) => {
 
     return await response.json();
   } catch (error) {
-    console.error('❌ GET échoué:', error);
+    console.error('GET échoué:', error);
     throw error;
   }
 };
@@ -329,7 +329,7 @@ const postJSON = async (url, data, options = {}) => {
 
     return await response.json();
   } catch (error) {
-    console.error('❌ POST échoué:', error);
+    console.error('POST échoué:', error);
     throw error;
   }
 };
