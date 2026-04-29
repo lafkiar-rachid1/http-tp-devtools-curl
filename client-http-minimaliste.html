@@ -323,20 +323,20 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>🌐 Client HTTP Minimaliste</h1>
+      <h1>Client HTTP Minimaliste</h1>
       <p>TP Exercice 1 - Testez vos requêtes HTTP directement dans le navigateur</p>
     </div>
 
     <div class="content">
       <!-- Exemples -->
       <div class="examples">
-        <h4>⚡ Exemples rapides:</h4>
+        <h4>Exemples rapides:</h4>
         <ul>
-          <li onclick="chargerExemple('get')">📥 GET - Récupérer un post</li>
-          <li onclick="chargerExemple('post')">📤 POST - Créer un post</li>
-          <li onclick="chargerExemple('put')">✏️ PUT - Modifier un post</li>
-          <li onclick="chargerExemple('delete')">🗑️ DELETE - Supprimer un post</li>
-          <li onclick="chargerExemple('httpbin')">🔍 Tester httpbin.org</li>
+          <li onclick="chargerExemple('get')">GET - Récupérer un post</li>
+          <li onclick="chargerExemple('post')">POST - Créer un post</li>
+          <li onclick="chargerExemple('put')">PUT - Modifier un post</li>
+          <li onclick="chargerExemple('delete')">DELETE - Supprimer un post</li>
+          <li onclick="chargerExemple('httpbin')">Tester httpbin.org</li>
         </ul>
       </div>
 
@@ -395,18 +395,18 @@
         </div>
 
         <div class="button-group">
-          <button type="submit">🚀 Envoyer Requête</button>
-          <button type="button" class="button-secondary" onclick="reinitialiser()">🔄 Réinitialiser</button>
+          <button type="submit">Envoyer Requête</button>
+          <button type="button" class="button-secondary" onclick="reinitialiser()">Réinitialiser</button>
         </div>
       </form>
 
       <!-- Résultats -->
       <div id="result" class="result">
         <div class="tabs">
-          <div class="tab active" onclick="afficherTab('statut')">📊 Status</div>
-          <div class="tab" onclick="afficherTab('headers')">📋 Headers</div>
-          <div class="tab" onclick="afficherTab('corps')">📄 Corps</div>
-          <div class="tab" onclick="afficherTab('timing')">⏱️ Timing</div>
+          <div class="tab active" onclick="afficherTab('statut')">Status</div>
+          <div class="tab" onclick="afficherTab('headers')">Headers</div>
+          <div class="tab" onclick="afficherTab('corps')">Corps</div>
+          <div class="tab" onclick="afficherTab('timing')">Timing</div>
         </div>
 
         <div id="statut" class="tab-content active">
@@ -604,12 +604,12 @@
       // Timing
       const timingMs = timing.toFixed(2);
       document.getElementById('timingContent').innerHTML = `
-        ⏱️ <strong>${timingMs}ms</strong> pour la requête complète
+        <strong>${timingMs}ms</strong> pour la requête complète
       `;
     }
 
     function afficherErreur(error) {
-      document.getElementById('statusCode').innerHTML = `<span class="status error">❌ ERREUR</span>`;
+      document.getElementById('statusCode').innerHTML = `<span class="status error">ERREUR</span>`;
       document.getElementById('statusText').textContent = error.message;
       document.getElementById('headersContent').textContent = 'Erreur lors de la requête';
       document.getElementById('corpsContent').textContent = error.toString();
