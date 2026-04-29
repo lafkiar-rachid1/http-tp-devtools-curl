@@ -83,6 +83,4 @@ Ouvrir `client-http-minimaliste.html` dans le navigateur et tester les requêtes
 
 ---
 
-**Ressources:** [MDN Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) | [cURL Docs](https://curl.se/docs/) | [httpbin.org](https://httpbin.org/)
-
 **Date:** 26 avril 2026 | **Statut:** Complet
